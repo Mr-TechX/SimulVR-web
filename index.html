@@ -1,0 +1,428 @@
+<!-- ------------------------------------------------------ -->
+<!-- | PROJECT: SimulVR Web                               | -->
+<!-- | AUTHOR: Ulises L Camacho & Brayan Torres Padilla   | -->
+<!-- | VERSION: 1.0.0                                     | -->
+<!-- ------------------------------------------------------ -->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD configuracion no visible para el usuario -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="TecnoProjects Security"> <!-- Autor de la web -->
+    <meta name="robots" content="index, follow"> <!-- Indexado a buscadores -->
+  	<meta name="google-site-verification" content="your-google-site-verification-code"> <!-- Verificacion para google -->
+  	<meta name="keywords" content="SimulVR, VR, realidad virtual, capacitacion, empresas, simulacion, web, cursos, Simulacion de realidad virtual, oficial, website, licencia"> <!-- Palabras clave para el buscador de google -->
+    <meta name="description" content="Pagina oficial de SimulVR inc."> <!-- Descripcion de la pagina -->
+    <title>SimulVR</title> <!-- Titulo de la web -->
+    <link rel="icon" type="image/ico" href="img/icn.png">  <!-- icono de la web--> 
+    <link rel="stylesheet" href="styles/style.css"> <!-- llamado al CSS -->
+  	<link rel="stylesheet" href="styles/audio.css"> <!-- llamdo al CSS del boton de bienvenida -->
+</head>
+  <!-- Cuerpo de la pagina (visible para el usuario) -->
+<body>
+  	<!-- llamado del audio track.mp3 ubicado en la carpeta audio formateado como mpeg -->
+  	<audio autoplay muted playsinline loop id="audio-bg">
+        <source src="audio/track.mp3" type="audio/mpeg">
+    </audio>
+  	<!-- boton de bienvenida (activa el audio) -->
+  	<div id="overlay">
+        <div id="modalBienvenida">
+            <h2>Bienvenid@ a SimulVR</h2>
+            <button id="btnEntrar">Entrar</button>
+        </div>
+    </div>
+  	<!-- SHAPES -->
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <!-- SINGLE NAVIGATION HEADER -->
+    <header>
+        <div class="container">
+            <nav class="glass">
+              	<!-- icono y texto del navbar -->
+                <div class="logo" onclick="showPage('home')">
+                    <div class="logo-icon">
+                      	<!-- imagen del navbar -->
+                        <img src="img/icn.png" class ="img-nav" href="index.html" alt="logo">
+                    </div>
+                  	<!-- Texto del navbar -->
+                    <span>SIMUL VR</span>
+                </div>
+                <div class="nav-links">
+                  <!-- Links del Nav -->
+                    <a href="#" onclick="showPage('home')" class="active">Inico</a>
+                    <a href="#" onclick="showPage('about')">Sobre Nosotros</a>
+                    <a href="#" onclick="showPage('services')">Servicios</a>
+                    <a href="#" onclick="showPage('contact')">Contacto</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <div class="hero-image">
+                      <!-- imagen de presentacion -->
+                        <img src="img/muro.png" alt="Modern Technology Interaction" />
+                    </div>
+                    <div class="hero-content">
+                      	<!-- Titulo del recuadro de presentacion -->
+                        <h1>Bienvenido Al Futuro</h1>
+                      <p>Somos una empresa que brinda capacitacion innovadora y segura mediante realidad virtual, facilitando el aprendizaje practico y efectivo para colaboradores con ayudas visuales inmersivas que mejoren el aprendizaje.<br><b>SimulVR la nueva realidad de la capacitacion virtual.</b></b></p>
+                        <a href="#" class="cta-button" onclick="showPage('about')">Saber Màs</a>
+                    </div>
+                </section>
+
+      			<!-- Seccion compacta de servicios -->
+                <section class="features">
+                    <div class="feature-card glass">
+                        <div class="feature-icon">🤖</div>
+                        <h3>Capacitacion VR</h3>
+                        <p>Capacitacion virtual con videos compatibles con gafas de realidad virtual.</p>
+                    </div>
+                    <!-- LICENCIAS-->
+                    <div class="feature-card glass">
+                        <div class="feature-icon">🪪</div>
+                        <h3>Venta de licencias</h3>
+                        <p>Licencias para uso del software de capacitacion virtual.</p>
+                    </div>
+                    <!-- SOPORTE TECNICO-->
+                    <div class="feature-card glass">
+                        <div class="feature-icon">🛠️</div>
+                        <h3>Soporte Tecnico</h3>
+                        <p>Solucion en caso de fallas tecnicas del software.</p>
+                    </div>
+                  <!-- CURSOS-->
+                    <div class="feature-card glass">
+                        <div class="feature-icon">📚</div>
+                        <h3>Cursos</h3>
+                        <p>Preparacion para el uso basico y avanzado del software.</p>
+                    </div>
+                  <!-- MANTENIMIENTO-->
+                    <div class="feature-card glass">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Mantenimiento</h3>
+                        <p>Reparacion de bugs, optimizacion, adaptabilidad y disminucion del uso de recursos.</p>
+                    </div>
+                  <!-- ACTUALIZACIONES-->
+                    <div class="feature-card glass">
+                        <div class="feature-icon">📈</div>
+                        <h3>Actualizacion</h3>
+                        <p>Creacion de nuevas funciones y mejoras del software de manera constante.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="about-content">
+                    <div class="about-text glass">
+                      <!-- mision, vision y valores -->
+                        <h2>Mision, Vision y valores</h2>
+                        <p><b>Mision</b><br> Brindar capacitación innovadora y segura mediante la realidad virtual facilitando el aprendizaje practico y efectivo para colaboradores, clientes y proveedores contribuyendo a la prevención de riesgos laborales y al desarrollo profesional con la tecnología de vanguardia.</p>
+                        <p><b>Vision</b><br>Ser líderes en la implementación de soluciones de realidad virtual para la formación y capacitación promoviendo entornos laborales más seguros, productivos y sostenibles con impacto positivo en colaboradores, clientes, proveedores, gobierno y medio ambiente.</p>
+                        <p>
+                          	<!-- Lista de valores -->
+                          	<b>Valores</b>
+                          	<ul class="lista">
+								<li class="element-list">INNOVACION: uso de tecnología avanzada para mejorar la capacitación.</li>
+                              <li class="element-list">SEGURIDAD: priorizar la prevención de riesgos y bienestar de los colaboradores.</li>
+                              <li class="element-list">RESPONSABILIDAD SOCIAL: compromiso con la comunidad y el medio ambiente.</li>
+                              <li class="element-list">TRANSPARIENCIA: comunicación clara y ética con todas las partes interesadas.</li>
+                              <li class="element-list">COLABORACION: trabajo conjunto con clientes, proveedores y gobierno para el éxito común</li>
+                              <li class="element-list">CALIDAD: excelencia en los programas de formación y ayudas visuales.</li>
+                      		</ul>
+                      </p>
+                    </div>
+              		<!-- Cuadricula de informacion de proyectos etc -->
+                    <div class="stats">
+                        <div class="stat-card glass">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Proyectos</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Clientes</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-number">1 año</div>
+                            <div class="stat-label">Experiencia</div>
+                        </div>
+                        <div class="stat-card glass">
+                            <div class="stat-number">21/08/25</div>
+                            <div class="stat-label">Fundacion</div>
+                        </div>
+                    </div>
+                </section>
+          <!-- NUESTRO EQUIPO -->
+                <section class="team-section">
+                    <h2>Nuestro Equipo</h2>
+                    <div class="team-grid">
+                        <div class="team-member glass">
+                            <div class="team-avatar">
+                                <img src="person/BTP.png" alt="Brayan Padilla Avatar" style=" border-radius:50%; width: 12rem;">
+                            </div>
+                            <h3>Brayan Padilla</h3>
+                            <p class="role">CEO & Founder</p>
+                            <p class="bio">Ing. Industrial y Desarrollador web Front-End.</p>
+                            <div class="team-social">
+                                <a href="https://www.facebook.com/profile.php?id=61577815425925&sk" target="_blank" title="Facebook" style="font-size: 1.5em; margin-right: 8px; color: #1877f2;">&#x1D405;</a>
+                                <a href="https://instagran.com/padillabrayantorres" target="_blank" title="Instagram" style="font-size: 1.5em; margin-right: 8px;">&#x1F4F7;</a>
+                                <a href="https://X.com/@BrayanTorrespa2" target="_blank" title="Twitter" style="font-size: 1.5em;">&#x1F426;</a>
+                            </div>
+                        </div>
+                        <div class="team-member glass">
+                            <div class="team-avatar">
+                                <img src="person/ULC.png" alt="Ulises L Camacho Avatar" style=" border-radius:50%; width: 12rem;">
+                            </div>
+                            <h3>Ulises L Camacho</h3>
+                            <p class="role">Developer & Co-Founder</p>
+                            <p class="bio">Desarrollador fullstack, experto en tecnologia, ciberseguridad y diseño.</p>
+                            <div class="team-social">
+                                <a href="https://instagram.com/ulises__camacho" target="_blank" title="Instagram" style="font-size: 1.5em; margin-right: 8px;">&#x1F4F7;</a>
+                                <a href="https://linkedin.com/in/uliseslcamacho" target="_blank" title="Facebook" style="font-size: 1.5em; margin-right: 8px; color: #ffffff;">In</a>
+                                <a href="https://ulisescamacho.vercel.app" target="_blank" title="Portfolio" style="font-size: 1.5em; margin-right: 8px; color: #ffffff;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="vertical-align: middle;">
+                                        <circle cx="12" cy="12" r="10" stroke="#0078d4" stroke-width="2" fill="none"/>
+                                        <path d="M2 12h20M12 2a10 10 0 0 1 0 20M12 2a10 10 0 0 0 0 20" stroke="#ffffff" stroke-width="2" fill="none"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- APARTADO DE SERVICIOS -->
+    <div id="services" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="hero glass">
+                    <h1>Nuestros Servicios.</h1>
+                    <p>Conoce todo lo que podemos hacer por ti, tenemos multiples servicios de utilidad para el software de SimulVR.</p>
+                </section>
+              <!-- SERVICIOS-->
+                <section class="services-grid">
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">🤖</div>
+                            <h3>Capacitacion VR.</h3>
+                        </div>
+                        <p>Capacitacion con videos compatibles con gafas de realidad virtual.</p>
+                        <ul class="service-features">
+                            <li>Compatible con multiples modelos de gafas de realidad virtual.</li>
+                            <li>Conversiòn de videos mp4 a VR.</li>
+                            <li>Ediciòn de video para agregar comentarios.</li>
+                            <li>Compatible con multiples formatos de video.</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">🪪</div>
+                            <h3>Venta de licencias</h3>
+                        </div>
+                        <p>Licencias para uso del software de capacitacion virtual.</p>
+                        <ul class="service-features">
+                            <li>Descuentos para estudiantes</li>
+                            <li>Pagos mensuales</li>
+                            <li>Membresia Anual</li>
+                            <li>Prueba gratuita de 15 dias</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">🛠️</div>
+                            <h3>Soporte tecnico</h3>
+                        </div>
+                        <p>solucion en caso de falla tecnica del software.</p>
+                        <ul class="service-features">
+                            <li>Atencion automatica 24/7</li>
+                            <li>Solucion personalizada</li>
+                            <li>Atencion tecnica en horario laboral</li>
+                            <li>Guia de solucion de problemas</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">📚</div>
+                            <h3>Cursos</h3>
+                        </div>
+                        <p>Preparacion para el uso basico y avanzado del software.</p>
+                        <ul class="service-features">
+                            <li>Guias intuitivas</li>
+                            <li>Tutorial de bienvenida</li>
+                            <li>Atencion 24/7 online</li>
+                            <li>Cursos exclusivos grabados</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">⚙️</div>
+                            <h3>Mantenimiento</h3>
+                        </div>
+                        <p>Reparacion de bugs, optimizacion, adaptabilidad y disminucion de uso de recursos.</p>
+                        <ul class="service-features">
+                            <li>Plataforma con bugs solucionados</li>
+                            <li>Configuracion para disminuir el uso de recursos</li>
+                            <li>Opcion para reporte de fallas</li>
+                            <li>Soluciones de respuesta rapida</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card glass">
+                        <div class="service-header">
+                            <div class="service-icon">📈</div>
+                            <h3>Actualizaciones</h3>
+                        </div>
+                        <p>Crecion de nuevas funciones y mejoras al software constantemente.</p>
+                        <ul class="service-features">
+                            <li>Actualizacion constatnte</li>
+                            <li>Solucion de Bugs</li>
+                            <li>Nuevas funciones</li>
+                            <li>Aumento de compatibilidad</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- APARTADO DE CONTACTO -->
+    <div id="contact" class="page">
+        <div class="container">
+            <div class="content-wrapper">
+                <section class="contact-grid">
+                    <div class="contact-form glass">
+                        <h2>Contactanos</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Nombre Completo</label>
+                                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo Electronico</label>
+                                <input type="email" id="email" name="email" placeholder="Ingresa tu correo electronico" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject" placeholder="Tema del correo">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" placeholder="Cuentanos tu situacion" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button" id="sendEmailBtn">Enviar</button>
+                          <script>
+                        	document.getElementById('sendEmailBtn').addEventListener('click', function() {
+                            	var name = document.querySelector('input[name="name"]').value;
+                            	var email = document.querySelector('input[name="email"]').value;
+                            	var subject = document.querySelector('select[name="subject"]').value;
+                            	var message = document.querySelector('textarea[name="message"]').value;
+                            	var mailto = "mailto:torrespadillabrayan409@gmail.com"
+                                	+ "?subject=Contacto SimulVR: " + encodeURIComponent(subject)
+                                	+ "&body=" + encodeURIComponent(
+                                    "Nombre: " + name + "\n" +
+                                    "Email: " + email + "\n" +
+                                    "Mensaje: " + message
+                                	);
+                            	window.location.href = mailto;
+                        	});
+                        </script>
+                        </form>
+                    </div>
+
+                    <div class="contact-info glass">
+                        <h2>Informacion de Contacto</h2>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📧</div>
+                            <div class="contact-item-text">
+                                <h4>Correos</h4>
+                                <p>torrespadillabrayan409@gmail.com<br>ulises.camacho@pm.me</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📞</div>
+                            <div class="contact-item-text">
+                                <h4>Telefono</h4>
+                                <p>+524171803307<br>+524171028032</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div class="contact-item-text">
+                                <h4>Ubicacion</h4>
+                                <p>StartUp Mexicana<br>Operacion remota</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🕒</div>
+                            <div class="contact-item-text">
+                                <h4>Horario Laboral</h4>
+                                <p>Lun-Vie: 8AM-5PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="contact-map-section">
+                    <div class="contact-map glass">
+                        <h2>Encuentranos</h2>
+                        <div class="map-container">
+                            <div class="map-placeholder">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14994.501767397678!2d-100.69770954979278!3d20.024229052165097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842cd5eb54fe3591%3A0x485dd4d3931fd4a8!2sAc%C3%A1mbaro%20Centro%2C%20Enrique%20Velasco%20Ibarra%2C%2038664%20Ac%C3%A1mbaro%2C%20Gto.!5e0!3m2!1ses-419!2smx!4v1756886120423!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- APARTADO FINAL -->
+    <div id="footer">
+        <div class="container">
+            <footer class="glass">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="#" onclick="showPage('about')">Sobre Nosotros</a>
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="https://TecnoProjectsSecurity.vercel.app" target="_blank">TecnoProjects Security</a>
+                        <a href="#" onclick="showPage('contact')">Contacto</a>
+                    </div>
+                    <div class="copyright">
+                        &copy; 2025 SimulVR. All rights reserved. 
+                        Designed by <a rel="nofollow" href="https://TecnoProjectsSecurity.vercel.app" target="_blank">TecnoProjects Security</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+<script src="scripts/audio.js"></script>
+<script src="scripts/code.js"></script>
+</body>
+</html>
