@@ -18,13 +18,13 @@
 
     /* Modal */
     #modalBienvenida {
-      background: #222; /* gris oscuro */
-      border: 3px solid rgb(255, 255, 255);
+      background: #1b1929; /* gris oscuro */
+      border: 3px solid #00f;
       border-radius: 15px;
       padding: 2rem 3rem;
       text-align: center;
       color: white;
-      box-shadow: 0 0 30px rgba(155, 155, 155, 0.7);
+      box-shadow: 0 0 30px rgba(45, 0, 243, 0.623);
       transform: scale(0.8);
       opacity:0;
       transition: all 0.5s ease;
@@ -48,8 +48,8 @@
       padding: 1rem 2rem;
       border: none;
       border-radius: 0.75rem;
-      background: rgb(255, 255, 255);
-      color: rgb(0, 0, 0);
+      background: #0000ff;
+      color: rgb(255, 255, 255);
       font-size: 1.2rem;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -57,8 +57,8 @@
       max-width: 250px;
     }
     #btnEntrar:hover {
-      background: rgb(0, 0, 0);
-      color: #fff;
+      background: rgb(255, 255, 255);
+      color: #00f;
       transform: scale(1.05);
     }
 
